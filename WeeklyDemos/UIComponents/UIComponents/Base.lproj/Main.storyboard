@@ -538,9 +538,19 @@
                                             <action selector="reloadButtonTapped:" destination="8R7-g3-9b9" id="xfH-1m-Kq8"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="reload" image="safari" catalog="system" id="JiY-xI-7fE">
+                                    <barButtonItem title="reload" image="safari" catalog="system" id="JiY-xI-7fE" userLabel="openWithSafari">
                                         <connections>
                                             <action selector="openWithSafari:" destination="8R7-g3-9b9" id="Acd-hK-yhv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="reload" image="backward" catalog="system" id="CDJ-jS-5vY" userLabel="goBack">
+                                        <connections>
+                                            <action selector="goBackward:" destination="8R7-g3-9b9" id="U2n-RK-JBn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="reload" image="forward" catalog="system" id="8QQ-aW-0mg" userLabel="goForward">
+                                        <connections>
+                                            <action selector="goForward:" destination="8R7-g3-9b9" id="c4T-wj-6JA"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -810,7 +820,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="backward" catalog="system" width="128" height="79"/>
         <image name="bgImage" width="640" height="360"/>
+        <image name="forward" catalog="system" width="128" height="79"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">

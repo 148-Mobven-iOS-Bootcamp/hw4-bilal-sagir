@@ -65,9 +65,16 @@ class WebViewContainerViewController: UIViewController {
     }
     // MARK: - HOMEWORK PART 1
     
-    @IBAction func openWithSafari(_ sender: UIBarButtonItem) {
+    @IBAction func openWithSafari(_ sender: UIBarButtonItem) { //open with safari feature
         
         UIApplication.shared.open(webView.url!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func goBackward(_ sender: UIBarButtonItem) { //go back feature
+        webView.goBack()
+    }
+    @IBAction func goForward(_ sender: UIBarButtonItem) {
+        webView.goForward()
     }
 }
 
