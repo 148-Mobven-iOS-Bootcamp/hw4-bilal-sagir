@@ -63,6 +63,12 @@ class WebViewContainerViewController: UIViewController {
     @IBAction func reloadButtonTapped(_ sender: UIBarButtonItem) {
         webView.reload()
     }
+    // MARK: - HOMEWORK PART 1
+    
+    @IBAction func openWithSafari(_ sender: UIBarButtonItem) {
+        
+        UIApplication.shared.open(webView.url!, options: [:], completionHandler: nil)
+    }
 }
 
 extension WebViewContainerViewController: WKNavigationDelegate {

@@ -538,6 +538,11 @@
                                             <action selector="reloadButtonTapped:" destination="8R7-g3-9b9" id="xfH-1m-Kq8"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="reload" image="safari" catalog="system" id="JiY-xI-7fE">
+                                        <connections>
+                                            <action selector="openWithSafari:" destination="8R7-g3-9b9" id="Acd-hK-yhv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -807,6 +812,7 @@
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="bgImage" width="640" height="360"/>
         <image name="location" catalog="system" width="128" height="118"/>
+        <image name="safari" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
