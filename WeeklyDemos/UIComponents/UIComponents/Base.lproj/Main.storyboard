@@ -553,9 +553,14 @@
                                             <action selector="goForward:" destination="8R7-g3-9b9" id="c4T-wj-6JA"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="reload" image="doc.text" catalog="system" id="3TQ-Tr-Oas" userLabel="goForward">
+                                    <barButtonItem title="reload" image="doc.text" catalog="system" id="3TQ-Tr-Oas" userLabel="loadHtml">
                                         <connections>
                                             <action selector="loadHtml:" destination="8R7-g3-9b9" id="uQn-aP-gT7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="reload" image="applescript" catalog="system" id="Yfh-jC-g95" userLabel="injectJS">
+                                        <connections>
+                                            <action selector="injectJavascript:" destination="8R7-g3-9b9" id="dCo-W9-of9"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -824,6 +829,7 @@
         <segue reference="Wvb-rm-dwp"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="applescript" catalog="system" width="102" height="128"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="backward" catalog="system" width="128" height="79"/>
         <image name="bgImage" width="640" height="360"/>

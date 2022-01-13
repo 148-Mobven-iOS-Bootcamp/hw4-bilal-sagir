@@ -85,7 +85,7 @@ class WebViewContainerViewController: UIViewController {
             <style>
                 body {
                     font-size: 36px;
-                    font-family: "AmericanTypewriter";
+                    
                     
                     text-align: center;
                     height: 100vh;
@@ -122,6 +122,11 @@ class WebViewContainerViewController: UIViewController {
     @IBAction func loadHtml(_ sender: UIBarButtonItem) {
         
         webView.loadHTMLString(htmlString, baseURL: nil)
+    }
+    
+    @IBAction func injectJavascript(_ sender: Any) { //Javascript injection to change font & font size
+        let js = "document.querySelector('body').style.fontFamily = 'AmericanTypewriter';document.querySelector('body').style.fontSize = '40px'"
+        webView.evaluateJavaScript(js, completionHandler: nil)
     }
 }
 
