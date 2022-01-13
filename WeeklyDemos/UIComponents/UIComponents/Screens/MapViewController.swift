@@ -40,6 +40,7 @@ class MapViewController: UIViewController {
         case .authorizedAlways, .authorizedWhenInUse, .authorized:
             locationManager.requestLocation()
         case .denied, .restricted:
+            alert() // alert go to settings
             //popup gosterecegiz. go to settings butonuna basildiginda
             //kullaniciyi uygulamamizin settings sayfasina gonder
             break
@@ -81,4 +82,20 @@ extension MapViewController: CLLocationManagerDelegate {
 
 extension MapViewController: MKMapViewDelegate {
 
+}
+
+// MARK: - HOMEWORK PART 2
+extension MapViewController{
+    
+    func alert() {
+        let alert = UIAlertController(title: "Uyarı", message: "Allow Location", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Go to Settings", style: UIAlertAction.Style.default, handler: { action in
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, completionHandler: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
