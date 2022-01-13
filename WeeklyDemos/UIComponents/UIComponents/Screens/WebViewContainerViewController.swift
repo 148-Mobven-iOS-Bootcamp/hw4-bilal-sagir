@@ -65,16 +65,63 @@ class WebViewContainerViewController: UIViewController {
     }
     // MARK: - HOMEWORK PART 1
     
-    @IBAction func openWithSafari(_ sender: UIBarButtonItem) { //open with safari feature
-        
+    @IBAction func openWithSafari(_ sender: UIBarButtonItem) {
         UIApplication.shared.open(webView.url!, options: [:], completionHandler: nil)
     }
     
-    @IBAction func goBackward(_ sender: UIBarButtonItem) { //go back feature
+    @IBAction func goBackward(_ sender: UIBarButtonItem) {
         webView.goBack()
     }
     @IBAction func goForward(_ sender: UIBarButtonItem) {
         webView.goForward()
+    }
+    
+    let htmlString = """
+    <!doctype html>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <html>
+        <head>
+            <style>
+                body {
+                    font-size: 36px;
+                    font-family: "AmericanTypewriter";
+                    
+                    text-align: center;
+                    height: 100vh;
+                    display:flex;
+                }
+                
+                .container{
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    width:90vw;
+                    height: 90vh;
+                    margin: auto;
+                }
+                
+                .element{
+                    margin: auto;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="element">
+                    Hello, <span class="custom">WKWebView!</span>
+
+                </div>
+            </div>
+            
+        </body>
+    </html>
+    """
+    
+    @IBAction func loadHtml(_ sender: UIBarButtonItem) {
+        
+        webView.loadHTMLString(htmlString, baseURL: nil)
     }
 }
 

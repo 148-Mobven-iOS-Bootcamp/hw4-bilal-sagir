@@ -553,6 +553,11 @@
                                             <action selector="goForward:" destination="8R7-g3-9b9" id="c4T-wj-6JA"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="reload" image="doc.text" catalog="system" id="3TQ-Tr-Oas" userLabel="goForward">
+                                        <connections>
+                                            <action selector="loadHtml:" destination="8R7-g3-9b9" id="uQn-aP-gT7"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -822,6 +827,7 @@
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="backward" catalog="system" width="128" height="79"/>
         <image name="bgImage" width="640" height="360"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="forward" catalog="system" width="128" height="79"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="safari" catalog="system" width="128" height="121"/>
