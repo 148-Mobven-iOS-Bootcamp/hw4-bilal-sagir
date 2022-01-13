@@ -84,7 +84,7 @@ extension MapViewController: MKMapViewDelegate {
 
 }
 
-// MARK: - HOMEWORK PART 2
+//MARK: - HOMEWORK PART 2
 extension MapViewController{
     
     func alert() {
